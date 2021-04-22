@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+    <div id="counter">
+        <h3 id="inp"></h3>
+        <div class="gridcontainer">
+            <button id="Computerid1" onclick="Computer('1')">1</button>
+            <button id="Computerid2" onclick="Computer('2')">2</button>
+            <button id="Computerid3" onclick="Computer('3')">3</button>
+            <button id="Computerid10" onclick="Computer('+')">+</button>
+
+            <button id="Computerid4" onclick="Computer('4')">4</button>
+            <button id="Computerid5" onclick="Computer('5')">5</button>
+            <button id="Computerid6" onclick="Computer('6')">6</button>
+            <button id="Computerid11" onclick="Computer('-')">-</button>
+
+            <button id="Computerid7" onclick="Computer('7')">7</button>
+            <button id="Computerid8" onclick="Computer('8')">8</button>
+            <button id="Computerid9" onclick="Computer('9')">9</button>
+            <button id="Computerid12" class="com" onclick="Computer('*')">*</button>
+
+            <button id="Computerid17" onclick="Computer('0')">0</button>
+            <button id="Computerid13" onclick="Computer13('=')">=</button>
+            <button id="Computerid15" onclick="Computer('/')">/</button>
+            <button id="Computerid14" onclick="Computer14('c')">c</button>
+
+        </div>
+
+
+        <script>
+
+            //將數字放到按鈕裡面
+
+            function Computer(cum) {
+                document.getElementById("inp").innerText += cum;
+            }
+
+            //如果遇到兩個*就跳出警示 
+
+
+            //將字串轉為數字
+            function Computer13() {
+
+                var a = eval(document.getElementById("inp").innerText);
+                document.getElementById("inp").innerText = a;
+
+
+            }
+            //遇到c就空白
+            function Computer14() {
+                document.getElementById("inp").innerText = "";
+
+
+            }
+
+
+        </script>
+    </div>
+
+</body>
+
+</html>
